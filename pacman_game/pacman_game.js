@@ -84,10 +84,10 @@ function eatDot() {
 }
 
 function eatGhost(key) {
-  if (ghost[key-1]) {
+  if (ghosts[key-1]) {
     if (ghosts[key-1].edible === false) {
       lives -= 1
-      console.log('\n' + ghosts[key-1].name + ' that has the colour ' + ghost[key-1].colour + ' is not edible!')
+      console.log('\n' + ghosts[key-1].name + ' that has the colour ' + ghosts[key-1].colour + ' is not edible!')
     }
   }
 }
