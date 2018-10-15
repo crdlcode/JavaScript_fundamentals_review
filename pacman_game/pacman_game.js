@@ -13,7 +13,7 @@ var inky = {
   edible: false
 };
 
-var Blinky = {
+var blinky = {
   menu_option: '2',
   name: 'Blinky',
   colour: 'Cyan',
@@ -21,7 +21,7 @@ var Blinky = {
   edible: false
 };
 
-var Pinky = {
+var pinky = {
   menu_option: '3',
   name: 'Pinky',
   colour: 'Pink',
@@ -29,13 +29,15 @@ var Pinky = {
   edible: false
 };
 
-var Clyde = {
+var clyde = {
   menu_option: '4',
   name: 'Clyde',
   colour: 'Orange',
   character: 'Pokey',
   edible: false
 };
+
+var ghosts = [inky, blinky, pinky, clyde];
 
 
 // replace this comment with your four ghosts setup as objects
@@ -62,7 +64,11 @@ function displayStats() {
 function displayMenu() {
   console.log('\n\nSelect Option:\n');  // each \n creates a new line
   console.log('(d) Eat Dot');
+  for (var i = 0; i < ghosts.length; i++) {
+    console.log('(' + (i+1) + ') ' + 'Eat ' + ghosts[i].name)
+  }
   console.log('(q) Quit');
+
 }
 
 function displayPrompt() {
