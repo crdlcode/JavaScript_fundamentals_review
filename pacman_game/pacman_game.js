@@ -83,6 +83,15 @@ function eatDot() {
   score += 10;
 }
 
+function eatGhost(key) {
+  if (ghost[key-1]) {
+    if (ghosts[key-1].edible === false) {
+      lives -= 1
+      console.log('\n' + ghosts[key-1].name + ' that has the colour ' + ghost[key-1].colour + ' is not edible!')
+    }
+  }
+}
+
 
 // Process Player's Input
 function processInput(key) {
@@ -93,6 +102,18 @@ function processInput(key) {
       break;
     case 'd':
       eatDot();
+      break;
+    case '1':
+      eatGhost(1);
+      break;
+    case '2':
+      eatGhost(2);
+      break;
+    case '3':
+      eatGhost(3);
+      break;
+    case '4':
+      eatGhost(4);
       break;
     default:
       console.log('\nInvalid Command!');
